@@ -324,7 +324,7 @@ func (r *Runestone) Encipher() ([]byte, error) {
 			if edicts[i].ID.Block < (edicts[j].ID.Block) {
 				return true
 			}
-			if edicts[i].ID.Block == edicts[j].ID.Block && edicts[i].ID.Block < edicts[j].ID.Block {
+			if edicts[i].ID.Block == edicts[j].ID.Block && edicts[i].ID.Tx < edicts[j].ID.Tx {
 				return true
 			}
 			return false
